@@ -32,13 +32,20 @@
       .content {
         flex: 1;
         overflow-y: auto;
+        margin-left: 20px;
+        margin-top: 10px;
       }
       .content-neirong {
         width: 100px;
         height: 110px;
         border-radius: 5px;
+        margin-top: 10px;
+        text-align: center;
         background-color: #1abc9c;
         cursor: pointer;
+      }
+      .content-neirong:hover {
+        box-shadow: 0px 0px 10px rgba(95, 93, 93, 0.568);
       }
       .footer {
         background: #f6f7f8;
@@ -46,7 +53,6 @@
       }
 
       .header,
-      .content,
       .footer {
         display: flex;
         align-items: center;
@@ -58,9 +64,16 @@
     <div class="wrap">
       <div class="header"><img src="img/xiamu.jpg" alt="" /></div>
       <div class="content">
+        <p>作业区：</p>
         <div class="content-neirong">
           <span>点赞函数</span><br />
-          <button onclick="jia()" id="dz">0</button>
+          <button
+            onclick="jia()"
+            id="dz"
+            style="margin-top: 25px; width: 20px; height: 20px; cursor: pointer"
+          >
+            0
+          </button>
         </div>
       </div>
       <div class="footer">版权所有</div>
