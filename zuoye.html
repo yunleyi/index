@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      .wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+      }
+      .header {
+        background: #f6f7f8;
+        height: 150px;
+      }
+      .header img {
+        border-radius: 50%;
+        width: 5%;
+      }
+      .content {
+        flex: 1;
+        overflow-y: auto;
+      }
+      .content-neirong {
+        width: 100px;
+        height: 110px;
+        border-radius: 5px;
+        background-color: #1abc9c;
+        cursor: pointer;
+      }
+      .footer {
+        background: #f6f7f8;
+        height: 100px;
+      }
+
+      .header,
+      .content,
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header"><img src="img/xiamu.jpg" alt="" /></div>
+      <div class="content">
+        <div class="content-neirong">
+          <span>点赞函数</span><br />
+          <button onclick="jia()" id="dz">0</button>
+        </div>
+      </div>
+      <div class="footer">版权所有</div>
+    </div>
+
+    <script>
+      function jia() {
+        let dianZanChuShiZhi = window.document.getElementById("dz");
+        let dianZan = parseInt(dianZanChuShiZhi.innerText);
+        let xinShuZi = dianZan + 1;
+        dianZanChuShiZhi.innerText = xinShuZi;
+        console.log("点赞成功");
+      }
+    </script>
+  </body>
+</html>
